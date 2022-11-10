@@ -18,4 +18,10 @@ describe Solver do
       end.to raise_error('NegativeNumberFactorialError')
     end
   end
+
+  context 'When #Reverse method is called' do
+    it 'should return the string reverse' do
+      expect(@solver.reverse('hello')).to eql 'olleh'
+    end
+  end
 end
