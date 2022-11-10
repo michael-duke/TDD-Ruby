@@ -46,5 +46,8 @@ describe Solver do
     it 'should return buzz when N is divisible by 5' do
       expect(@solver.fizzbuzz(25)).to match('buzz')
     end
+    it 'should return fizzbuzz when N is divisible by 3 and 5' do
+      expect(@solver.fizzbuzz(15)).to match('fizzbuzz')
+    end
   end
 end
