@@ -4,6 +4,6 @@ class Solver
   end
 
   def reverse(word)
-    word.reverse
+    word.instance_of?(String) ? word.reverse : (raise StandardError, 'Word Not A String Error')
   end
 end
