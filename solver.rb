@@ -10,6 +10,8 @@ class Solver
   def fizzbuzz(number)
     if (number%3).zero?
       'fizz'
+    elsif (number%5).zero?
+      'buzz'
     end
   end
 end
