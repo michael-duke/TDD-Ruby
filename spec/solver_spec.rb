@@ -49,5 +49,8 @@ describe Solver do
     it 'should return fizzbuzz when N is divisible by 3 and 5' do
       expect(@solver.fizzbuzz(15)).to match('fizzbuzz')
     end
+    it 'should return \'N\' when N doesn\'t abide by the above conditions' do
+      expect(@solver.fizzbuzz(32)).to match('32')
+    end
   end
 end
