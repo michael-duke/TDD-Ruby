@@ -38,4 +38,10 @@ describe Solver do
       end.to raise_error('Word Not A String Error')
     end
   end
+
+  context 'When #fizzbuzz method is called' do
+    it 'should return fizz when N is divisible by 3' do
+      expect(@solver.fizzbuzz(9)).to match('fizz')
+    end
+  end
 end
