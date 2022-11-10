@@ -21,7 +21,20 @@ describe Solver do
 
   context 'When #Reverse method is called' do
     it 'should return the string reverse' do
-      expect(@solver.reverse('hello')).to eql 'olleh'
+      expect(@solver.reverse('hello')).to match('olleh') 
+    end
+    it 'should return the empty string when empty string is given' do
+      expect(@solver.reverse('')).to match('')
+    end
+    it 'should raise an error when given another datatype other than a string' do
+      expect do
+        expect(@solver.reverse(21))
+      end.to raise_error('Word Not A String Error')
+    end
+    it 'should raise an error when given another datatype other than a string' do
+      expect do
+        expect(@solver.reverse(['Hello', 'There!', 'Andor']))
+      end.to raise_error('Word Not A String Error')
     end
   end
 end
